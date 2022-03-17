@@ -44,7 +44,7 @@ const generateCombination = (ids: number[], length: number) => {
 
   console.log(
     result.map(
-      (r) => r.map((i) => ids[i]).join(',')
+      (r) => r.map((i) => ids[i]).sort((a, b) => a - b).join(',')
     ).join('\n')
   );
 }
